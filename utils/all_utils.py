@@ -4,6 +4,7 @@ import pandas as pd
 import joblib
 from matplotlib.colors import ListedColormap
 import os
+import logging
 
 plt.style.use('fivethirtyeight') # THIS IS STYLE OF GRAPHS
 
@@ -16,6 +17,7 @@ def prepare_data(df):
   Returns:
       tuple: It returns the tuple of dependent variables and independent variables
   """
+  logging.info('Preparing databy segregating the dependent and independent variables')
   X = df.drop('y', axis = 1)
   y = df['y']
 
@@ -28,11 +30,12 @@ def save_model(model, filename):
       model (python object): Trained model to 
       filename (str): path to save the Trained model
   """
-
+  logging.info('Saving Trained model')
   model_dir = 'models'
   os.makedirs(model_dir, exist_ok = True) # ONLY CREATE IF MODEL DIRECTORY DOESN'T EXISTS
   filePath = os.path.join(model_dir, filename) #model/filename
   joblib.dump(model, filePath)
+  logging.info(f'Saved the model to {model_dir}')
 
 def save_plot(df, file_name, model):
   """It save the plots to file.
@@ -65,8 +68,6 @@ def save_plot(df, file_name, model):
 
     xx1, xx2 = np.meshgrid(np.arange(x1_min, x1_max, resolution), 
                            np.arange(x2_min, x2_max, resolution))
-    print(xx1)
-    print(xx1.ravel())
     Z = classfier.predict(np.array([xx1.ravel(), xx2.ravel()]).T)
     Z = Z.reshape(xx1.shape)
     plt.contourf(xx1, xx2, Z, alpha=0.2, cmap=cmap)
@@ -86,4 +87,5 @@ def save_plot(df, file_name, model):
   os.makedirs(plot_dir, exist_ok=True) # ONLY CREATE IF MODEL_DIR DOESN"T EXISTS
   plotPath = os.path.join(plot_dir, file_name) # model/filename
   plt.savefig(plotPath)
+  logging.info('Saving the plots at {plotPath}')
 

@@ -1,5 +1,5 @@
 # oneNeuron
-DLCVNLP | Peerceptron
+Perceptron
 
 Command to use for pushing the code to the GitHub
 

@@ -1,19 +1,25 @@
-    """
-    author: Rohan Dhanraj
-    email: rdy5674@gmail.com
-    """ 
+"""
+author: Rohan Dhanraj
+email: rdy5674@gmail.com
+""" 
 
 from utils.model import Perceptron
 from utils.all_utils import prepare_data, save_plot, save_model
 import numpy as np
 import pandas as pd
 import os
+import logging
+
+logging_str = "[%(asctime)s: %(levelname)s: %(module)s] %(message)s"
+log_dir = 'logs'
+os.makedirs(log_dir, exist_ok=True)
+logging.basicConfig(filename = os.path.join(log_dir,'running_logs.log'), level=logging.INFO, format=logging_str)
 
 def main(data, eta, epochs, filename, plotFilename):
 
    
     df = pd.DataFrame(data)
-    print(df)
+    logging.info(f"This is the actual dataframe {df}")
 
     X, y = prepare_data(df)
     
@@ -36,7 +42,10 @@ if __name__=='__main__':
 
     ETA = 0.3 # 0 to 1
     EPOCHS = 10
-
-
-    main(data = OR, eta = ETA, epochs = EPOCHS, filename = 'or.model', plotFilename='or.png')
+    try:
+        logging.info('\n>>>>>>>>>>>>>>>> Training >>>>>>>>>>>>>>>>>>>>>>>>')
+        main(data = OR, eta = ETA, epochs = EPOCHS, filename = 'or.model', plotFilename='or.png')
+        logging.info('\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Trained <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+    except Exception as e:
+        logging.exception(e)
 
