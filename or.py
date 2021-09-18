@@ -1,3 +1,8 @@
+    """
+    author: Rohan Dhanraj
+    email: rdy5674@gmail.com
+    """ 
+
 from utils.model import Perceptron
 from utils.all_utils import prepare_data, save_plot, save_model
 import numpy as np
