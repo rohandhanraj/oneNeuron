@@ -20,7 +20,7 @@ cp Research\ notebooks/demo.ipynb .
 ### Add Image
 ![Sample Image](plots\and.png)
 
-<img src="plots\and.png">
+<img src="plots\and.png" alt="AND Plot" width="500" height="600">
 
 ### Python Example
 ```python
