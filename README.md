@@ -38,11 +38,11 @@ cp Research\ notebooks/demo.ipynb .
 ### Add URL
 [Git Handbook](https://guides.github.com/introduction/git-handbook/)
 
-<a href="https://guides.github.com/introduction/git-handbook/">Git Handbook</a>
+<a href="https://github.com/git-guides/">Git Guide</a>
 
 
 ### Add Image
-<img src="plots\and.png" alt="AND Plot" width="500" height="600">
+<img src="plots\and.png" alt="AND Plot" width="600" height="600">
 
 ![AND Plot Image](plots\and.png)
 
