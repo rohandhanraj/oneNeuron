@@ -42,7 +42,7 @@ cp Research\ notebooks/demo.ipynb .
 
 
 ### Add Image
-<img src="plots\and.png" alt="AND Plot" width="600" height="600">
+<img src="plots\and.png" alt="AND Plot" width="500" height="600">
 
 ![AND Plot Image](plots\and.png)
 
