@@ -1,10 +1,34 @@
 # oneNeuron
 Perceptron
+1. Perceptron Implimentation
+2. Perceptron Implimentation | Python scripting and packaging | Modular coding
+3. Python logging basics , docstrings
+4. README.md | Documentation
+
 
 Command to use for pushing the code to the GitHub
-
 ```bash
 git add . && git commit -m "docstring updated" && git push origin main
+```
+
+Command to use for cloning a repository
+```bash
+git clone https://github.com/<repository>
+```
+
+Command to use for folders creation in a repository
+```bash
+mkdir <folder name>
+```
+
+Command to use for folders within a folder creation in a repository
+```bash
+mkdir -p <parent folder name / folder name>
+```
+
+Command to use for files within a folder creation in a repository
+```bash
+touch <folder path/file name>
 ```
 
 ```bash
@@ -12,15 +36,15 @@ cp Research\ notebooks/demo.ipynb .
 ```
 
 ### Add URL
-[Git Handbook](https://https://guides.github.com/introduction/git-handbook/)
+[Git Handbook](https://guides.github.com/introduction/git-handbook/)
 
-<a href="https://https://guides.github.com/introduction/git-handbook/">Git Handbook</a>
+<a href="https://guides.github.com/introduction/git-handbook/">Git Handbook</a>
 
 
 ### Add Image
-![Sample Image](plots\and.png)
-
 <img src="plots\and.png" alt="AND Plot" width="500" height="600">
+
+![AND Plot Image](plots\and.png)
 
 ### Python Example
 ```python
